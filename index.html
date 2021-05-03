@@ -8,28 +8,36 @@
     <script src="https://kit.fontawesome.com/bf812b2e24.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="modoOscuro">
     
-    <header class="header">
-        <h1 class="header-title">Generador de Memes</h1>
-        <div>
-            <button class="button button-text"><i class="far fa-image"></i>Imagen</button>
-            <button><i class="fas fa-font"></i>Texto</div></button>
-            <button><i class="fas fa-lightbulb"></i>Modo Oscuro</button>
+    <header>
+        <h1 class="header-titulo">Generador de Memes</h1>
+        <div class="contenedor-botones">
+            <button class="button"><i class="far fa-image"></i> Imagen</button>
+            <button class="button"><i class="fas fa-font"></i> Texto</button>
+
+            <button class="button" id="botonCambioModos"><i class="fas fa-lightbulb"></i> Modo Oscuro</button>
         </div>
     </header>
-    <main>
+    
+    <main class="main">
         <div class="meme-container">
             <p class="meme-text">Texto de arriba</p>
-            <img class="meme-image" src="" alt="">
+            <div class="canvas">
+                <img src="" alt="" id="imagen-meme" aria-label="Imagen de meme">   
+            </div>
             <p class="meme-text">Texto de abajo</p>
         </div>
-        <button><i class="fas fa-download"></i>descargar meme</button>
+        <button class="button button-descargar"><i class="fas fa-download"></i>descargar meme</button>
     </main>
+
     <aside class="panel">
+        <button class="panel-close-button" id="panel-close-button" aria-label="Cerrar panel"></button>
         <!--
-        *************************************************** IMG PANEL ***************************************************
+        *************************************************** PANEL IMAGEN  ***************************************************
       -->
         <section class="img-panel" id="img-panel">
             <button><i class="fas fa-window-close"></i></button>
@@ -107,7 +115,7 @@
         <!--*************************************************** TEXT PANEL ***************************************************
     --> 
         <section>
-            <button><i class="fas fa-window-close"></i></button>
+    
             <h2>Texto</h2>
             <!--
           ----------------------- TEXTO -----------------------
@@ -184,6 +192,37 @@
                     <input type="checkbox"><label for="sin-background-checkbox">Fondo transparente</label>
                 </div>
             </div>
+            <!--
+          ----------------------- CONTORNO -----------------------
+        -->
+            <div>
+                <h3>CONTORNO</h3>
+                <div class="contenedorBotones">
+                    <button>Ninguno</button>
+                    <button>Claro</button>
+                    <button>Oscuro</button>
+                </div>
+            </div>
+            <!--
+          ----------------------- ESPACIADO -----------------------
+        -->
+            <div>
+                <h3>ESPACIADO</h3>
+                <input type="number" aria-label="espaciado" min="10" max="50" value="35">
+            </div>
+                 <!--
+          ----------------------- INTERLINEADO -----------------------
+        -->
+        <div>
+            <h3>INTERLINEADO</h3>
+            <select aria-label="interlineado">
+            <option value="0.8">0.8</option>
+            <option value="1">1</option>
+            <option value="1.2" selected>1.2</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.6">2.6</option>
+        </div>
         </section>
         <!--
        

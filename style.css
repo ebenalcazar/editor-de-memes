@@ -1,5 +1,59 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+header {
+    background-color: var(--color-header);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-titulo{
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -1px;
+  }
+  .contenedor-botones{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .button {
+    margin: 2%;
+    transition: background-color 0.2s;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-backgroud);
+    padding: 0 20px;
+  }
+  .meme-container{ 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 10%;
+   margin-bottom: 5%;
+  }
+  .canvas{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+  }
+  .meme-text{
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-weight: 800;
+    background-color: rgb(253, 243, 243);
+    padding: 15px 30px;
+  }
+  .button-descargar{
+    margin-top: 30px;
+    padding: 15px 15px;
+    background-color: #2e7d32;
+    color: white;
+  }
+  
