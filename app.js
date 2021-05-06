@@ -1,60 +1,42 @@
+//Modo Claro - Oscuro
 const body = document.querySelector("body");
 const botonCambioModos = document.querySelector("#botonCambioModos");
+const nombreBoton = document.querySelector("#nombreBoton")
 
 botonCambioModos.addEventListener("click", ()=>{
 
-  if (body.className == `ModoOscuro`){
-    body.className = `ModoClaro`;
-    botonCambioModos.textContent = "Modo Claro"
-  } else if (body.className = `ModoClaro`){
-    body.className = `ModoOscuro`
-    botonCambioModos.innerText = `ModoOscuro`;
+  if (body.className == `modoOscuro`){
+    body.className = `modoClaro`;
+    nombreBoton.textContent = "Modo Claro"
+  } else if (body.className == `modoClaro`){
+    body.className = `modoOscuro`
+    nombreBoton.textContent = "Modo Oscuro";
   }
 });
 
-/*const botonCambioModos = document.querySelector(`#botonCambioModos`);
+//Botones Imagen y Texto
 
-const cambiarAModoClaro = () =>{
-  document.body.classList.remove(`modoOscuro`);
-  document.body.classList.add(`modoClaro`);
-}
-const cambiarAModoOscuro = () =>{
-  document.body.classList.remove(`modoClaro`);
-  document.body.classList.add(`modoOscuro`);
-}
+const panel = document.querySelector(".panel");
+const panelImg = document.querySelector(".panel-img");
+const panelText = document.querySelector(".panel-text");
 
-const cambiarTemas = () =>{
-  $(`botonOscuro`).addEventListener(`click`, cambiarAModoClaro)
-  $(`botonClaro`).addEventListener(`click`, cambiarAModoOscuro)
-}*/
+const botonCerrarPanel = document.querySelector(".botonCerrarPanel");
+const botonImg = document.querySelector(".botonImg");
+const botonText = document.querySelector(".botonText");
 
-
-
-const panel = document.querySelector("#panel");
-      const panelImg = document.querySelector("#panel-img");
-      const panelText = document.querySelector("#panel-text");
-
-      const buttonClose = document.querySelector("#button-close");
-      const buttonImg = document.querySelector("#button-img");
-      const buttonText = document.querySelector("#button-text");
-
-
-      //cuando hago click en boton de cerrar se cierra el panel(aside completo)
-      //agregar la clase ocular
       
-      buttonClose.addEventListener("click",()=>{
+      botonCerrarPanel.addEventListener("click", ()=>{
         panel.classList.add("ocultar");
       });
 
-      // cuando hago click en el boton de imagen o en el boton texto debe verse el panel
-      // quitar la clase ocular
-      buttonText.addEventListener("click",()=>{
+
+      botonText.addEventListener("click",()=>{
         panel.classList.remove("ocultar");
         panelImg.classList.add("ocultar");
         panelText.classList.remove("ocultar");
       });
 
-      buttonImg.addEventListener("click",()=>{
+      botonImg.addEventListener("click",()=>{
         panel.classList.remove("ocultar");
         panelText.classList.add("ocultar");
         panelImg.classList.remove("ocultar");

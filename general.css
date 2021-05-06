@@ -30,7 +30,9 @@ html,
 .modoOscuro {
     --color-header: #0e172c;
     --color-backgroud: #1a233b;
-    --color-panel: #2b3c69;
+    --color-panel: #131a2e;
+    --color-boton-default: #1a2a4d;
+    --color-boton-default-hover: #4e5565;
     --color-text: #ffffff;
     --font-primary: 'Open Sans', sans-serif;
     --border-radius: 3px;
@@ -40,10 +42,23 @@ html,
     --color-header: #314e99;
     --color-backgroud: #435996;
     --color-panel: #3f548f;
-    --color-text: #424242;
+    --color-boton-default: #e0e0e0;
+    --color-boton-default-hover: #bdbdbd;
+    --color-text: #ffffff;
     --font-primary: 'Open Sans', sans-serif;
     --border-radius: 3px;
 }
-.oculto{
+.ocultar{
     display: none;
+}
+.boton{
+  height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s;
+    font-size: 14px;
+    cursor: pointer;
 }
