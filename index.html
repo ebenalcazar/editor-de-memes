@@ -26,11 +26,10 @@
     
     <main class="main">
         <div class="meme-container">
-            <p class="meme-text">Texto de arriba</p>
-            <div class="canvas">
-                <img src="" alt="" id="imagen-meme" aria-label="Imagen de meme">   
+            <p class="meme-text" id="textoArriba">Texto Superior</p>
+            <div class="canvas" id="imgMeme">
             </div>
-            <p class="meme-text">Texto de abajo</p>
+            <p class="meme-text" id="textoAbajo">Texto Inferior</p>
         </div>
         <button class="boton boton-descargar"><i class="fas fa-download"></i>descargar meme</button>
     </main>
@@ -44,23 +43,23 @@
         <section class="panel-img" id="panel-img">
             
             <h2 class="tituloPanel">IMAGEN</h2>
-            <div class="panel-control">
+            <div>
                 <h3 class="titulo-panel-contol">URL</h3>
-                <input type="text" class="inputPanelControl" id="url-img-input" aria-label="URL de imagen">
+                <input type="url" class="inputPanelControl" id="urlMeme" aria-label="URL de imagen">
             </div>
             <!--
         *************************************************** FONDO ***************************************************
       -->
             <div class="panel-control">
                 <h3 class="tituloPanelControl">FONDO</h3>
-                <div class="columnas-panel-contol">
-                    <div class="panel-control-color panel-control-columna">
-                        <input type="color" value="#FFFFFF" aria-label="Color de fondo de imagen">
-                        <span>#FFFFFF</span>
+                <div class="contenedor">
+                    <div class="divInterno">
+                        <input class="inputPanel Control" id="inputFondo" type="color" value="#FFFFFF" aria-label="Color de fondo de imagen">
+                        <span class="valorInput" id="spanInputFondo">#FFFFFF</span>
                     </div>
                     <div class="columnas-panel-control">
-                        <select aria-label="Modo de mezcla de fondo de imagen" id="" class="inputPanelControl">
-                            <option value="unset">Ninguno</option>
+                        <select aria-label="Modo de mezcla de fondo de imagen" id="inputMezcla" class="inputPanelControl">
+                            <option value="unset" selected="selected">Ninguno</option>
                             <option value="lighten">Aclarar</option>
                             <option value="darken">Oscurecer</option>
                             <option value="difference">Diferencia</option>
@@ -77,61 +76,61 @@
                 <h3 class="tituloPanelControl">FILTROS</h3>
                 <div class="panel-control-deslizable">
                     <label for="brightness">BRILLO</label>
-                    <input type="range" min="0" max="1" value="1" step="0.1">
+                    <input type="range" id="brillo" min="0" max="1" value="1" step="0.1">
                 </div>
                 <div class="panel-control-deslizable">
                     <label for="opacity">OPACIDAD</label>
-                    <input type="range" min="0" max="1" value="1" step="0.1">
+                    <input type="range" id="opacidad" min="0" max="1" value="1" step="0.1">
                 </div>
                 <div class="panel-control-deslizable">
                     <label for="contrast">CONTRASTE</label>
-                    <input type="range" min="0" max="1" value="1" step="0.1">
+                    <input type="range" id="contraste" min="100" max="1000" value="100">
                 </div>
                 <div class="panel-control-deslizable">
                     <label for="blur">DESENFOQUE</label>
-                    <input type="range" min="0" max="1" value="1" step="0.1">
+                    <input type="range" id="desenfoque" min="0" max="10" value="0" step="0.1">
                 </div>
                 <div class="panel-control-deslizable">
                     <label for="grayscale">ESCALA DE GRISES</label>
-                    <input type="range" min="0" max="1" value="1" step="0.1">
+                    <input type="range" id="grises" min="0" max="100" value="0">
                 </div>
                 <div class="panel-control-deslizable">
                     <label for="sepia">SEPIA</label>
-                    <input type="range" min="0" max="1" value="1" step="0.1">
+                    <input type="range" id="sepia" min="0" max="100" value="0">
                 </div>
                 <div class="panel-control-deslizable">
                     <label for="hue">HUE</label>
-                    <input type="range" min="0" max="1" value="1" step="0.1">
+                    <input type="range" id="hue" min="0" max="360" value="0">
                 </div>
                 <div class="panel-control-deslizable">
                     <label for="saturate">SATURADO</label>
-                    <input type="range" min="0" max="1" value="1" step="0.1">
+                    <input type="range" id="saturado" min="100" max="1000" value="100" step="10">
                 </div>
                 <div class="panel-control-deslizable">
                     <label for="invert">NEGATIVO</label>
-                    <input type="range" min="0" max="1" value="1" step="0.1">
+                    <input type="range" id="negativo" min="0" max="1" value="0" step="0.1">
                 </div>
             </div>
-            <button class="boton button-restablecer">Reestablecer filtros</button>
+            <button class="boton botonesFondo boton-restablecer" id="botonRestablecer">Reestablecer filtros</button>
         </section>
         <!--*************************************************** TEXT PANEL ***************************************************
      --> 
         <section class="panel-text ocultar" id="panel-text">
     
-            <h2 class="tituloPanel">Texto</h2>
+            <h2 class="tituloPanel">TEXTO</h2>
             <!--
           ----------------------- TEXTO -----------------------
         -->
             <div>
                 <h3 class="tituloPanelControl">SUPERIOR</h3>
-                <textarea aria-label="Texto superior" class="inputPanelControl" id="" cols="30" rows="10">TOP TEXT</textarea>
+                <textarea aria-label="Texto superior" class="inputPanelControl" id="inpTextSup" cols="30" rows="10">TEXTO SUPERIOR</textarea>
                 <div>
                     <input type="checkbox" id="sinTextoArriba"><label for="sin-Texto-Arriba">Sin texto superior</label>
                 </div>
             </div>
             <div>
                 <h3 class="tituloPanelControl">INFERIOR</h3>
-                <textarea aria-label="Texto Inferior" class="inputPanelControl" id="" cols="30" rows="10">BOTTOM TEXT</textarea>
+                <textarea aria-label="Texto Inferior" class="inputPanelControl" id="inpTexAba" cols="30" rows="10">TEXTO INFERIOR</textarea>
                 <div>
                     <input type="checkbox" id="sinTextoAbajo"><label for="sin-Texto-Abajo">Sin texto inferior</label>
                 </div>
@@ -158,9 +157,9 @@
                 <div class="contenedor">
                     <input type="number" class="inputPanelControl" aria-label="Tamaño de fuente" min="12" value="40">
                     <div class="botonesAlineacion">
-                        <button class="boton"><i class="fas fa-align-left"></i></button>
-                        <button class="boton"><i class="fas fa-align-center"></i></button>
-                        <button class="boton"><i class="fas fa-align-right"></i></button>
+                        <button class="boton botonAlineacion"><i class="fas fa-align-left"></i></button>
+                        <button class="boton botonAlineacion"><i class="fas fa-align-center"></i></button>
+                        <button class="boton botonAlineacion"><i class="fas fa-align-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -168,25 +167,25 @@
           ----------------------- COLOR -----------------------
         -->
             <div>
-                <div class="prueba">
+                <div class="divColor">
                     <!-- 
                     Color del texto
                     -->
-                    <div class="prueba2">
+                    <div class="divColorTexto">
                         <h3 class="tituloPanelControl">COLOR</h3>
-                        <div class="prueba3">
+                        <div class="divInterno">
                             <input type="color" value="#000000" aria-label="color de texto">
-                            <span>#000000</span>
+                            <span class="valorInput">#000000</span>
                         </div>
                     </div>
                     <!-- 
                         Color del fondo
                     -->
-                    <div class="prueba2">
+                    <div class="divColorTexto">
                         <h3 class="tituloPanelControl">FONDO</h3>
-                        <div class="prueba3">
+                        <div class="divInterno">
                             <input type="color" value="#FFFFFF" aria-label="Color del fondo del texto">
-                            <span>#FFFFFF</span>
+                            <span class="valorInput">#FFFFFF</span>
                         </div>
                     </div>
                 </div>
@@ -199,10 +198,10 @@
         -->
             <div>
                 <h3 class="tituloPanelControl">CONTORNO</h3>
-                <div class="contenedorBotones">
-                    <button>Ninguno</button>
-                    <button>Claro</button>
-                    <button>Oscuro</button>
+                <div class="contenedor">
+                    <button class="boton botonesFondo">Ninguno</button>
+                    <button class="boton botonesFondo">Claro</button>
+                    <button class="boton botonesFondo">Oscuro</button>
                 </div>
             </div>
             <!--

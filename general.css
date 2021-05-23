@@ -52,13 +52,17 @@ html,
     display: none;
 }
 .boton{
+
   height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px;
-    border-radius: var(--border-radius);
-    transition: background-color 0.2s;
-    font-size: 14px;
-    cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s;
+  font-size: 14px;
+  cursor: pointer;
+}
+.botonesFondo{
+  background-color: var(--color-boton-default);
+  margin-right: 3px;
 }
