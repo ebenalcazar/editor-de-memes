@@ -207,10 +207,15 @@ fondoTransparente.addEventListener("click", () =>{
   if (fondoTransparente.checked){
     textoArriba.style.backgroundColor = "transparent";
     textoAbajo.style.backgroundColor = "transparent";
-    imgMeme.style.backgroundImageSize = "extend";
+    textoArriba.style.position = "absolute"
+    textoAbajo.style.position = "absolute"
+    textoArriba.style.top = 0;
+    textoAbajo.style.bottom = 0;
   } else {
     textoArriba.style.backgroundColor = inputFondoTexto.value;
     textoAbajo.style.backgroundColor = inputFondoTexto.value;
+    textoArriba.style.position = "static"
+    textoAbajo.style.position = "static"
   }
 });
 

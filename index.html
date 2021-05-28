@@ -38,8 +38,7 @@
     <main class="main">
         <div class="meme-container">
             <p class="meme-text" id="textoArriba">Texto Superior</p>
-            <div class="canvas" id="imgMeme">
-            </div>
+            <div src="" alt="" aria-label="Imagen del meme" class="canvas" id="imgMeme"></div>
             <p class="meme-text" id="textoAbajo">Texto Inferior</p>
         </div>
         <button class="boton boton-descargar" id="descargarMeme"><i class="fas fa-download"></i>descargar meme</button>
@@ -64,12 +63,12 @@
             <div class="panel-control">
                 <h3 class="tituloPanelControl">FONDO</h3>
                 <div class="contenedor">
-                    <div class="divInterno">
-                        <input class="inputPanel Control" id="inputFondo" type="color" value="#FFFFFF" aria-label="Color de fondo de imagen">
+                    <div class="divInterno marginRight">
+                        <input id="inputFondo" type="color" value="#FFFFFF" aria-label="Color de fondo de imagen">
                         <span class="valorInput" id="spanInputFondo">#FFFFFF</span>
                     </div>
                     <div class="columnas-panel-control">
-                        <select aria-label="Modo de mezcla de fondo de imagen" id="inputMezcla" class="inputPanelControl">
+                        <select aria-label="Modo de mezcla de fondo de imagen" id="inputMezcla" class="divInterno width">
                             <option value="unset" selected="selected">Ninguno</option>
                             <option value="lighten">Aclarar</option>
                             <option value="darken">Oscurecer</option>

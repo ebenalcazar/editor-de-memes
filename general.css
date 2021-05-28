@@ -36,6 +36,7 @@ html,
     --color-text: #ffffff;
     --font-primary: 'Open Sans', sans-serif;
     --border-radius: 3px;
+    --color:rgb(52, 63, 62);
 
 }
 .modoClaro {
@@ -47,6 +48,7 @@ html,
     --color-text: #ffffff;
     --font-primary: 'Open Sans', sans-serif;
     --border-radius: 3px;
+    --color:rgb(52, 63, 62);
 }
 .ocultar{
     display: none;
@@ -56,7 +58,7 @@ html,
   height: 36px;
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 0.6em;
   border-radius: var(--border-radius);
   transition: background-color 0.2s;
   font-size: 14px;
@@ -64,11 +66,50 @@ html,
 }
 .botonesFondo{
   background-color: var(--color-boton-default);
-  margin-right: 3px;
+  margin-right: 0.18em;
+  margin-bottom: 0.50em;
+}
+.marginRight{
+  margin-right: 0.3em;
+  width: 9em !important;
+}
+.width{
+  width: 11em;
 }
 .contornoTextoClaro{
   -webkit-text-stroke: 2px white;
 }
 .contornoTextoOscuro{
   -webkit-text-stroke: 2px black;
+}
+/*PARA ESCRITORIO*/
+@media (min-width: 1000px){
+  main{
+    height: 86.2%;
+    overflow: hidden !important;
+  }
+  .panel{
+    width: 20% !important;
+    overflow: hidden !important;
+    padding-top: 1.8% !important;
+  }
+  .width{
+    width: 8em;
+  }
+  .panel.ocultar{
+    display: block;
+  }
+  .botonCerrarPanel{
+    display: none;
+  }
+  .boton-descargar{
+    margin-top: 0 !important;
+    margin-bottom: 1% !important;
+  }
+  .meme-container{
+    align-content: flex-start;
+    width: 40%;
+    padding-top: 0 !important;
+    margin-bottom: 2% !important;
+  }
 }
