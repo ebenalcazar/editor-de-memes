@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="panel.css">
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+    crossorigin="anonymous"
+  ></script>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"
+    integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw=="
+    crossorigin="anonymous"
+  ></script>
 </head>
 <body class="modoOscuro">
     
@@ -31,7 +42,7 @@
             </div>
             <p class="meme-text" id="textoAbajo">Texto Inferior</p>
         </div>
-        <button class="boton boton-descargar"><i class="fas fa-download"></i>descargar meme</button>
+        <button class="boton boton-descargar" id="descargarMeme"><i class="fas fa-download"></i>descargar meme</button>
     </main>
 
     <aside class="panel ocultar">
@@ -143,7 +154,7 @@
                 <!-- 
                         Tipos de fuente
                     -->
-                <select name="Tipos de fuente" id="" class="inputPanelControl" aria-label="Tipos de fuete">
+                <select name="Tipos de fuente" id="fuente" class="inputPanelControl" aria-label="Tipos de fuete">
                     <option value="Arial">Arial</option>
                     <option value="Arial Black">Arial Black</option>
                     <option value="American Typewriter">American Typewriter</option>
@@ -155,11 +166,11 @@
                     <option value="Times New Roman">Times New Roman</option>
                 </select>
                 <div class="contenedor">
-                    <input type="number" class="inputPanelControl" aria-label="Tamaño de fuente" min="12" value="40">
+                    <input type="number" class="inputPanelControl" id="tamanioFuente" aria-label="Tamaño de fuente" min="12" max="80" value="40">
                     <div class="botonesAlineacion">
-                        <button class="boton botonAlineacion"><i class="fas fa-align-left"></i></button>
-                        <button class="boton botonAlineacion"><i class="fas fa-align-center"></i></button>
-                        <button class="boton botonAlineacion"><i class="fas fa-align-right"></i></button>
+                        <button id="alineacionIzq" class="boton botonAlineacion"><i class="fas fa-align-left"></i></button>
+                        <button id="alineacionCen" class="boton botonAlineacion"><i class="fas fa-align-center"></i></button>
+                        <button id="alineacionDer" class="boton botonAlineacion"><i class="fas fa-align-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -174,8 +185,8 @@
                     <div class="divColorTexto">
                         <h3 class="tituloPanelControl">COLOR</h3>
                         <div class="divInterno">
-                            <input type="color" value="#000000" aria-label="color de texto">
-                            <span class="valorInput">#000000</span>
+                            <input id="inpColorTxt" type="color" value="#000000" aria-label="color de texto">
+                            <span id="spanColorTxt" class="valorInput">#000000</span>
                         </div>
                     </div>
                     <!-- 
@@ -184,14 +195,16 @@
                     <div class="divColorTexto">
                         <h3 class="tituloPanelControl">FONDO</h3>
                         <div class="divInterno">
-                            <input type="color" value="#FFFFFF" aria-label="Color del fondo del texto">
-                            <span class="valorInput">#FFFFFF</span>
+                            <input id="inputFondoTexto" type="color" value="#FFFFFF" aria-label="Color del fondo del texto">
+                            <span id="spanFondoTexto" class="valorInput">#FFFFFF</span>
                         </div>
                     </div>
                 </div>
+                
                 <div>
-                    <input type="checkbox"><label for="sin-background-checkbox">Fondo transparente</label>
+                    <input id="fondoTransparente" type="checkbox"><label for="sin-background-checkbox">Fondo transparente</label>
                 </div>
+                
             </div>
             <!--
           ----------------------- CONTORNO -----------------------
@@ -199,9 +212,9 @@
             <div>
                 <h3 class="tituloPanelControl">CONTORNO</h3>
                 <div class="contenedor">
-                    <button class="boton botonesFondo">Ninguno</button>
-                    <button class="boton botonesFondo">Claro</button>
-                    <button class="boton botonesFondo">Oscuro</button>
+                    <button id="sinContorno" class="boton botonesFondo">Ninguno</button>
+                    <button id="contClaro" class="boton botonesFondo">Claro</button>
+                    <button id="contOscuro" class="boton botonesFondo">Oscuro</button>
                 </div>
             </div>
             <!--
@@ -209,14 +222,14 @@
         -->
             <div>
                 <h3 class="tituloPanelControl">ESPACIADO</h3>
-                <input type="number" class="inputPanelControl" aria-label="espaciado" min="10" max="50" value="35">
+                <input type="number" id="espaciado" class="inputPanelControl" aria-label="espaciado" min="10" max="50" value="35">
             </div>
                  <!--
           ----------------------- INTERLINEADO -----------------------
         -->
         <div>
             <h3 class="tituloPanelControl">INTERLINEADO</h3>
-            <select class="inputPanelControl" aria-label="interlineado">
+            <select class="inputPanelControl" id="interlineado" aria-label="interlineado">
             <option value="0.8">0.8</option>
             <option value="1">1</option>
             <option value="1.2" selected>1.2</option>

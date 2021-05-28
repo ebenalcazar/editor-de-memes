@@ -42,7 +42,7 @@ html,
     --color-header: #314e99;
     --color-backgroud: #435996;
     --color-panel: #3f548f;
-    --color-boton-default: #e0e0e0;
+    --color-boton-default: #7b95d8;
     --color-boton-default-hover: #bdbdbd;
     --color-text: #ffffff;
     --font-primary: 'Open Sans', sans-serif;
@@ -65,4 +65,10 @@ html,
 .botonesFondo{
   background-color: var(--color-boton-default);
   margin-right: 3px;
+}
+.contornoTextoClaro{
+  -webkit-text-stroke: 2px white;
+}
+.contornoTextoOscuro{
+  -webkit-text-stroke: 2px black;
 }
