@@ -14,6 +14,8 @@ y contar con criterios de accesibilidad básicos
 
 Fuente https://frontend-proyecto-meme.adaitw.org/
 
+Enlace al editor deployado https://relaxed-galileo-922899.netlify.app/
+
 ###Funcionalidades 
 
 *Alternar entre paneles,
