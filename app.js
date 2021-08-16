@@ -254,7 +254,7 @@ interlineado.addEventListener("input", ()=>{
   textoAbajo.style.lineHeight = interlineado.value;
 });
 
-//BOTON DE DESCARGA (no funciona)
+//BOTON DE DESCARGA
 const descargarMeme = document.getElementById("descargarMeme");
 const memeContainer = document.getElementsByClassName("meme-container");
 descargarMeme.addEventListener("click", () =>{
