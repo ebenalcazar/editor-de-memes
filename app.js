@@ -3,8 +3,9 @@ const body = document.querySelector("body");
 const botonCambioModos = document.querySelector("#botonCambioModos");
 const nombreBoton = document.querySelector("#nombreBoton")
 
+// cumpli los espacios, para darle prolijidad a tu codigo. la funcion debe ser () => {
 botonCambioModos.addEventListener("click", ()=>{
-
+// no uses backticks a menos que estes interpolando. en estos casos usa comillas simples o dobles
   if (body.className == `modoOscuro`){
     body.className = `modoClaro`;
     nombreBoton.textContent = "Modo Claro"
@@ -23,7 +24,7 @@ const panelText = document.querySelector(".panel-text");
 const botonCerrarPanel = document.querySelector(".botonCerrarPanel");
 const botonImg = document.querySelector(".botonImg");
 const botonText = document.querySelector(".botonText");
-
+// ojo con el tabulado!!!!
       
       botonCerrarPanel.addEventListener("click", ()=>{
         panel.classList.add("ocultar");
@@ -43,6 +44,7 @@ const botonText = document.querySelector(".botonText");
       })
 
 //IMAGEN - INGRESAR IMG ELEGIDA
+// estos deben ser const, no van a cambiar de valor
 let urlMeme = document.getElementById("urlMeme"); //input
 let imgMeme = document.getElementById("imgMeme"); //div de la img
 
