@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* ojo con el tabulado, no se agrega uno cuando tenes mas de un elemento en el selector */
 html,
   body {
     height: 100vh;
@@ -50,6 +51,8 @@ html,
     --border-radius: 3px;
     --color:rgb(52, 63, 62);
 }
+
+/* deja espacio entre el selector y la llave */
 .ocultar{
     display: none;
 }
@@ -86,6 +89,8 @@ html,
 @media (min-width: 1000px){
   main{
     height: 86.2%;
+    /* no uses important, nunca. un important tapa algo en tu codigo, es un parche, 
+    no una solucion */
     overflow: hidden !important;
   }
   .panel{

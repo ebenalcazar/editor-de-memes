@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+  <!-- La pagina esta en español, pero el lenguaje del documento es ingles. Un lector de pantalla trataria de 
+leerla en ingles (va a leer "yiniradour di mims") y buscadores como google van a recomendar esta web a 
+angloparlantes.
+El lang del documento debe coincidir con el lenguaje que usan los usuarios de esta pagina.  -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,6 +28,7 @@
     crossorigin="anonymous"
   ></script>
 </head>
+<!-- siempre las clases con nombres compuestos separadas con-guiones, igual que los ids -->
 <body class="modoOscuro">
     
     <header>
@@ -54,6 +60,7 @@
             
             <h2 class="tituloPanel">IMAGEN</h2>
             <div>
+                <!-- esto es un label, no un titulo h3  -->
                 <h3 class="titulo-panel-contol">URL</h3>
                 <input type="url" class="inputPanelControl" id="urlMeme" aria-label="URL de imagen">
             </div>
@@ -85,6 +92,7 @@
             <div class="panel-control">
                 <h3 class="tituloPanelControl">FILTROS</h3>
                 <div class="panel-control-deslizable">
+                    <!-- el for del label debe coincidir con el id del elemento -->
                     <label for="brightness">BRILLO</label>
                     <input type="range" id="brillo" min="0" max="1" value="1" step="0.1">
                 </div>
@@ -167,6 +175,7 @@
                 <div class="contenedor">
                     <input type="number" class="inputPanelControl" id="tamanioFuente" aria-label="Tamaño de fuente" min="12" max="80" value="40">
                     <div class="botonesAlineacion">
+                        <!-- aca falta un aria label, como sabe el lector lo que hacen estos botones? -->
                         <button id="alineacionIzq" class="boton botonAlineacion"><i class="fas fa-align-left"></i></button>
                         <button id="alineacionCen" class="boton botonAlineacion"><i class="fas fa-align-center"></i></button>
                         <button id="alineacionDer" class="boton botonAlineacion"><i class="fas fa-align-right"></i></button>
@@ -182,6 +191,7 @@
                     Color del texto
                     -->
                     <div class="divColorTexto">
+                        <!-- esto es un label, no un titulo. mismo para todos los demas h3  -->
                         <h3 class="tituloPanelControl">COLOR</h3>
                         <div class="divInterno">
                             <input id="inpColorTxt" type="color" value="#000000" aria-label="color de texto">
